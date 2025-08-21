@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .card{
+        @apply
+        w-[500px] bg-white rounded-lg text-shadow-md overflow-hidden m-4
+        shadow-xl/30
+    }
+
+    .pembungkus_card{
+        @apply
+        justify-around flex flex-wrap mt-25 mb-35
+    }
+
+    .container{
+        @apply
+        m-4
+        
+    }
+
+    .judul-card{
+        @apply
+        mt-3 text-xl font-bold uppercase
+    }
+
+    .harga-discount{
+        @apply
+        text-red-700 text-lg
+    }
+
+    .harga-asli{
+        @apply
+        text-xl mt-2 font-bold inline-block
+    }
+
+    .bungkus-tombol-keranjang-beli{
+        @apply
+        mt-12 space-x-5
+    }
+
+    .tombol-beli{
+        @apply
+        p-1 w-20 uppercase bg-gray-500  rounded-md
+        hover:bg-gray-700
+    }
+
+    .tombol-keranjang{
+        @apply
+        p-1 w-25 uppercase bg-gray-500 rounded-md
+        hover:bg-gray-700
+    }
+
+    .login_card{
+        @apply
+        rounded-xl
+    }
+
+    .user_login{
+        @apply
+        flex flex-wrap
+    }
+
+    .back-login-form{
+        @apply
+        bg-gray-700
+        text-lg font-bold
+        justify-center
+        relative
+        items-center
+        p-10
+        text-center
+        rounded-md
+        shadow-xl/30
+
+    }
+    
+    .place{
+        @apply
+        text-white border-solid 
+        border-none 
+        border-b-2 
+        border-cyan-200 
+        outline-none
+    }
+
+    .login-btn{
+        @apply
+        cursor-pointer bg-violet-500 
+        pr-5 
+        pl-5 
+        pb-2 
+        rounded-xl 
+        text-center 
+        text-white w-full 
+        text-2xl 
+        text-shadow-md 
+        hover:bg-gradient-to-r 
+        text-transparent 
+        from-violet-500 
+        to-sky-500
+    }
+}
