@@ -19,7 +19,7 @@
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=index" class="hover:border-b-3 border-b-violet-500">Home</a></li>
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=about" class="hover:border-b-3 border-b-violet-500">About-us</a></li>
                     <?php if (isset($_SESSION['islogin'])){?>
-                    <li><?php echo htmlspecialchars($_SESSION['namaUser'])?></li>
+                    <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=profil"><?php echo htmlspecialchars($_SESSION['namaUser'])?></a></li>
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=logout" class="hover:border-b-3 border-b-violet-500">Logout</a></li>
                     <?php }else{ ?>
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=sigup" class="hover:border-b-3 border-b-violet-500">Sign-Up?</a><a href="/JB_Marketplace/routes/index.php?controller=User&action=singin" class="hover:border-b-3 border-b-violet-500">Sign-in</a></li>

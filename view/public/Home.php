@@ -26,7 +26,7 @@
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=index" class="hover:border-b-3 border-b-violet-500">Home</a></li>
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=about" class="hover:border-b-3 border-b-violet-500">About-us</a></li>
                     <?php if (isset($_SESSION['islogin'])){?>
-                    <li><?php echo htmlspecialchars($_SESSION['namaUser']);?></li>
+                    <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=profil"><?php echo htmlspecialchars($_SESSION['namaUser'])?></a></li>
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=logout" class="hover:border-b-3 border-b-violet-500">Logout</a></li>
                     <?php }else{ ?>
                     <li><a href="/JB_Marketplace/routes/index.php?controller=User&action=sigup" class="hover:border-b-3 border-b-violet-500">Sign-Up?</a><a href="/JB_Marketplace/routes/index.php?controller=User&action=singin" class="hover:border-b-3 border-b-violet-500">Sign-in</a></li>
@@ -39,10 +39,10 @@
     <video autoplay muted loop class="w-full object-cover bg-transparent-300">
         <source src="/JB_Marketplace/video/Tws_commerce.mp4">
     </video>
-    <article class="flex-wrap text-3xl p-20 text-center w-full bg-transparent absolute bottom-100">
-        <h2 class="bg-gradient-to-r from-red-300 to-violet-500 bg-clip-text uppercase font-extrabold text-6xl text-transparent text-shadow-md">Hello Welcome to Marketplace</h2><br>
-        <p class="text-white text-3xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente libero dolor quas aliquam eveniet expedita laborum, eaque officiis necessitatibus inventore! Atque qui vero unde eius aliquid ullam neque aspernatur eligendi.</p>
-    </article>
+        <article class="flex-wrap text-3xl p-20 text-center w-full bg-transparent absolute bottom-10">
+            <h2 class="bg-gradient-to-r from-red-300 to-violet-500 bg-clip-text uppercase font-extrabold text-6xl text-transparent text-shadow-md">Hello Welcome to Marketplace</h2><br>
+            <p class="text-white text-3xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente libero dolor quas aliquam eveniet expedita laborum, eaque officiis necessitatibus inventore! Atque qui vero unde eius aliquid ullam neque aspernatur eligendi.</p>
+        </article>
     </div>
 
     <div class="text-center mt-25 p-3 bg-black ml-50 mr-50 rounded-md text-shadow-white-lg/20">

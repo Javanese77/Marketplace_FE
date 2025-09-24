@@ -8,5 +8,5 @@ const total_dari_p_buat_lihat_hasil = document.getElementById('total');
 
 jum_dari_inputan_select.addEventListener('click',function(){
     const nilai = parseInt(jum_dari_inputan_select.value);
-    total_dari_p_buat_lihat_hasil.innerHTML= parseInt(jumlah(nilai));
+    total_dari_p_buat_lihat_hasil.innerHTML= "Total Harga : Rp. " + jumlah(nilai).toLocaleString('id-ID');
 })

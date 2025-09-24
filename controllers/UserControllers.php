@@ -1,6 +1,9 @@
 <?php
 include_once __DIR__ . '/../config/Database.php';
 include_once __DIR__ . '/../models/Customer.php';
+include_once __DIR__ . '/../models/Produk.php';
+
+error_reporting(0);
 
 class UserControllers{
     private $db;
@@ -40,9 +43,18 @@ class UserControllers{
         include_once __DIR__ . '/../view/public/form_pembelian.php';
     }
 
-    public function kirim_wa(){
-        echo "<script>alert('oke,terbeli,silahkan ss dulu dan kirimkan ke instagram dengan ss tersebut,jangan nipu,saya tau stocknya')
-        window.location.href='https://www.instagram.com/cristiano?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==';</script>";
+    public function kirim_pay(){
+        include_once __DIR__ . '/../view/public/Payment.php';
+    }
+
+    public function profil(){
+        include_once __DIR__ . '/../view/public/profil.php';
+    }
+
+      public function no_input(){
+        echo "<script>alert('isi barang dulu')</script>";
+        include_once __DIR__ . '/../view/public/form_pembelian.php';
+
     }
 
     public function logout(){
@@ -116,7 +128,15 @@ class UserControllers{
     }
     
     public function alertLanjut(){
-        echo "<script>window.location.href='index.php?controller=User&action=kirim_wa';</script>";
+        $isi_dari_jumlah = $_POST['jumlah'];
+        $harga_produk_db = $this->produk->ambil_produk();
+        if($isi_dari_jumlah>0){
+            $total_harga_server = $isi_dari_jumlah * $harga_produk_db["harga_produk"];
+            $_SESSION["total_harga_server"] = $total_harga_server;
+           echo "<script>window.location.href='index.php?controller=User&action=kirim_pay';</script>";
+        }else{
+           echo "<script>window.location.href='index.php?controller=User&action=no_input';</script>";
+        }
     }
 }
 ?>
